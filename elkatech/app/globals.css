@@ -1,0 +1,386 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.front-page-logo {
+  animation-name: flip;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes flip {
+  from {
+    opacity: 0;
+    transform: rotateX(90deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+}
+
+.front-page-h1 {
+  font-size: clamp(2rem, 5.6vw, 5.6vw);
+  color: #333;
+  margin-top: 100px;
+  margin-left: 9.5cap;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+
+  animation-name: slideFadeOut; /* Reference the defined keyframes */
+  animation-duration: 1s; /* Duration of the animation */
+  animation-timing-function: ease-out; /* Controls the animation speed curve */
+  animation-fill-mode: forwards; /* Prevents the animation from resetting */
+}
+
+@media (max-width: 1100px) and (min-width: 1000px) {
+  .front-page-h1 {
+    font-size: 5.6vw;
+  }
+}
+@media (max-width: 1000px) and (min-width: 900px) {
+  .front-page-h1 {
+    font-size: 5.6vw;
+  }
+}
+@media (max-width: 900px) and (min-width: 800px) {
+  .front-page-h1 {
+    font-size: 6.5vw;
+    margin-left: 330px;
+  }
+}
+@media (max-width: 800px) and (min-width: 700px) {
+  .front-page-h1 {
+    font-size: 6.8vw;
+    margin-left: 290px;
+  }
+}
+@media (max-width: 700px) and (min-width: 600px) {
+  .front-page-h1 {
+    font-size: 8.8vw;
+    margin-left: 230px;
+  }
+}
+@media (max-width: 600px) and (min-width: 500px) {
+  .front-page-h1 {
+    font-size: 9.8vw;
+    margin-left: 180px;
+  }
+}
+@media (max-width: 500px) and (min-width: 400px) {
+  .front-page-h1 {
+    font-size: 12.8vw;
+    margin-left: 120px;
+  }
+}
+@media (max-width: 400px) and (min-width: 300px) {
+  .front-page-h1 {
+    font-size: 12.8vw;
+    margin-left: 95px;
+  }
+}
+
+@media (max-width: 300px) {
+  .front-page-h1 {
+    font-size: 12.8vw;
+    margin-left: 75px;
+  }
+}
+@keyframes slideFadeOut {
+  from {
+    opacity: 0;
+    transform: translateY(50px); /* Start from the original position */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Adjust as needed */
+  }
+}
+
+h4 {
+  font-size: 1.75rem;
+  color: #333;
+  margin-top: -200px;
+  margin-left: 25cap;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  color: #939393;
+
+  animation-name: slideFadeOut; /* Reference the defined keyframes */
+  animation-duration: 1s; /* Duration of the animation */
+  animation-timing-function: ease-out; /* Controls the animation speed curve */
+  animation-fill-mode: forwards; /* Prevents the animation from resetting */
+}
+
+@media (max-width: 1300px) and (min-width: 1200px) {
+  h4 {
+    margin-left: 450px;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 1100px) {
+  h4 {
+    margin-left: 400px;
+  }
+}
+
+@media (max-width: 1100px) and (min-width: 1000px) {
+  h4 {
+    margin-left: 350px;
+  }
+}
+@media (max-width: 1000px) and (min-width: 900px) {
+  h4 {
+    margin-left: 300px;
+  }
+}
+@media (max-width: 900px) and (min-width: 800px) {
+  h4 {
+    margin-left: 250px;
+  }
+}
+@media (max-width: 800px) and (min-width: 700px) {
+  h4 {
+    margin-left: 200px;
+  }
+}
+@media (max-width: 700px) and (min-width: 600px) {
+  h4 {
+    margin-left: 150px;
+  }
+}
+@media (max-width: 600px) and (min-width: 500px) {
+  h4 {
+    margin-left: 100px;
+  }
+}
+@media (max-width: 500px) and (min-width: 400px) {
+  h4 {
+    margin-left: 50px;
+  }
+}
+@media (max-width: 400px) and (min-width: 300px) {
+  h4 {
+    margin-left: 22px;
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 300px) {
+  h4 {
+    margin-left: 50px;
+  }
+}
+
+.get-started-button {
+  margin-left: 625px; /* Default position for the button */
+  margin-top: 40px;
+  margin-bottom: 10px;
+  padding: 10px 25px;
+  font-size: 16px;
+  color: white;
+  background: linear-gradient(145deg, #000000, #434343);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-weight: bold;
+  animation-name: slideFadeOut;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  margin-bottom: 90px;
+}
+
+.get-started-button:hover {
+  background: linear-gradient(
+    145deg,
+    #434343,
+    #000000
+  ); /* Changes the gradient on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+}
+
+/* Adjustments for various viewport widths */
+@media (max-width: 1300px) and (min-width: 1200px) {
+  .get-started-button {
+    margin-left: 560px;
+  }
+}
+@media (max-width: 1200px) and (min-width: 1100px) {
+  .get-started-button {
+    margin-left: 520px;
+  }
+}
+@media (max-width: 1100px) and (min-width: 1000px) {
+  .get-started-button {
+    margin-left: 470px;
+  }
+}
+@media (max-width: 1000px) and (min-width: 900px) {
+  .get-started-button {
+    margin-left: 420px;
+  }
+}
+@media (max-width: 900px) and (min-width: 800px) {
+  .get-started-button {
+    margin-left: 370px;
+  }
+}
+@media (max-width: 800px) and (min-width: 700px) {
+  .get-started-button {
+    margin-left: 320px;
+  }
+}
+@media (max-width: 700px) and (min-width: 600px) {
+  .get-started-button {
+    margin-left: 270px;
+  }
+}
+@media (max-width: 600px) and (min-width: 500px) {
+  .get-started-button {
+    margin-left: 220px;
+  }
+}
+@media (max-width: 500px) and (min-width: 400px) {
+  .get-started-button {
+    margin-left: 170px;
+  }
+}
+@media (max-width: 400px) and (min-width: 300px) {
+  .get-started-button {
+    margin-left: 100px;
+  }
+}
+@media (max-width: 300px) {
+  .get-started-button {
+    margin-left: 70px;
+  }
+}
+
+.about-us-background {
+  background-color: #f7f7f7;
+  min-height: 400px;
+}
+
+@keyframes fadeInOnScroll {
+  from {
+    opacity: 0;
+    transform: translateY(50px); /* Starts 50px below its final position */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Moves to its final position */
+  }
+}
+
+.about-us-h1 {
+  opacity: 0; /* Start initially hidden */
+  animation-name: fadeInOnScroll;
+  animation-duration: 1s;
+  animation-fill-mode: forwards; /* Keeps the element at the end state of the animation */
+  animation-timing-function: ease-out;
+  will-change: opacity, transform; /* Optimizes for animations */
+  font-size: clamp(2rem, 5.6vw, 5.6vw);
+  color: #333;
+  padding-top: 20px;
+  margin-top: 100px;
+  margin-left: 9.5cap;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.about-us-p {
+  color: #666; /* Slightly lighter grey for the paragraph text */
+  line-height: 1.6; /* Increases line height for better readability */
+  font-size: 1.1rem; /* Comfortable reading size for the text */
+  text-align: justify; /* Justifies the text to align both left and right edges */
+  margin: 50;
+  margin-top: 50px;
+  opacity: 0; /* Start initially hidden */
+  animation-name: fadeInOnScroll;
+  animation-duration: 1s;
+  animation-fill-mode: forwards; /* Keeps the element at the end state of the animation */
+  animation-timing-function: ease-out;
+  will-change: opacity, transform; /* Optimizes for animations */
+}
+
+@media (max-width: 1100px) and (min-width: 1000px) {
+  .about-us-h1 {
+    font-size: 5.6vw;
+  }
+}
+@media (max-width: 1000px) and (min-width: 900px) {
+  .about-us-h1 {
+    font-size: 5.6vw;
+  }
+}
+@media (max-width: 900px) and (min-width: 800px) {
+  .about-us-h1 {
+    font-size: 6.5vw;
+    margin-left: 330px;
+  }
+}
+@media (max-width: 800px) and (min-width: 700px) {
+  .about-us-h1 {
+    font-size: 6.8vw;
+    margin-left: 290px;
+  }
+}
+@media (max-width: 700px) and (min-width: 600px) {
+  .about-us-h1 {
+    font-size: 8.8vw;
+    margin-left: 230px;
+  }
+}
+@media (max-width: 600px) and (min-width: 500px) {
+  .about-us-h1 {
+    font-size: 9.8vw;
+    margin-left: 180px;
+  }
+}
+@media (max-width: 500px) and (min-width: 400px) {
+  .about-us-h1 {
+    font-size: 12.8vw;
+    margin-left: 120px;
+  }
+}
+@media (max-width: 400px) and (min-width: 300px) {
+  .about-us-h1 {
+    font-size: 12.8vw;
+    margin-left: 95px;
+  }
+}
+
+@media (max-width: 300px) {
+  .about-us-h1 {
+    font-size: 12.8vw;
+    margin-left: 75px;
+  }
+}
