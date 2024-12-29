@@ -3,11 +3,16 @@ import Head from 'next/head';
 import Image from 'next/image';
 import React, { useEffect } from 'react';
 import AboutUs from '../components/aboutus';
-
-
+import Products from '@/components/products';
 
 
 export default function Home() {
+  const scrollToAboutUs = () => {
+    const aboutUsSection = document.getElementById('about-us-section');
+    if (aboutUsSection) {
+      aboutUsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <>
@@ -29,9 +34,12 @@ export default function Home() {
          alt="Elka Tech" />
         </div> 
         <h4>Where Quality & Quantity Meets</h4>
-        <button className="get-started-button">Get Started</button>
+        <button className="get-started-button" onClick={scrollToAboutUs}>Get Started</button>
       </div>
-      <AboutUs />
+      <div id="about-us-section">
+        <AboutUs />
+        <Products/>
+      </div>
     </>
   );
 }

@@ -3,6 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -283,6 +287,55 @@ h4 {
 .about-us-background {
   background-color: #f7f7f7;
   min-height: 400px;
+  display: block;
+}
+
+@media (max-width: 950px) {
+  .about-us-background {
+    min-height: 750px;
+  }
+}
+
+@media (max-width: 820px) {
+  .about-us-background {
+    min-height: 770px;
+  }
+}
+
+@media (max-width: 720px) {
+  .about-us-background {
+    min-height: 790px;
+  }
+}
+
+@media (max-width: 620px) {
+  .about-us-background {
+    min-height: 840px;
+  }
+}
+
+@media (max-width: 520px) {
+  .about-us-background {
+    min-height: 1180px;
+  }
+}
+
+@media (max-width: 420px) {
+  .about-us-background {
+    min-height: 1260px;
+  }
+}
+
+@media (max-width: 320px) {
+  .about-us-background {
+    min-height: 1500px;
+  }
+}
+
+@media (max-width: 220px) {
+  .about-us-background {
+    min-height: 1650px;
+  }
 }
 
 @keyframes fadeInOnScroll {
@@ -383,4 +436,74 @@ h4 {
     font-size: 12.8vw;
     margin-left: 75px;
   }
+}
+
+.logo-div {
+  height: 300px;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    300px
+  ); /* Example: creates three columns of equal width */
+  grid-gap: 20px; /* Specifies the gap between rows and columns */
+  justify-content: center; /* Centers the grid horizontally */
+  align-items: center; /* Centers the grid vertically */
+}
+
+.card {
+  border: 1px solid black; /* 1px is the width, solid is the style, and black is the color */
+}
+
+.material-symbols-outlined {
+  font-size: 3rem;
+  color: #333;
+  margin-right: 10px;
+}
+
+.circle-div {
+  background-color: #939393;
+  border-radius: 35px;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.circle-div svg {
+  margin: 0;
+  width: 60%;
+  height: auto;
+  margin-bottom: 5px;
+}
+
+.products-div {
+  margin-top: 200px;
+  min-height: 800px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+.products-h1 {
+  opacity: 0; /* Start initially hidden */
+  animation-name: fadeInOnScroll;
+  animation-duration: 1s;
+  animation-fill-mode: forwards; /* Keeps the element at the end state of the animation */
+  animation-timing-function: ease-out;
+  will-change: opacity, transform; /* Optimizes for animations */
+  font-size: clamp(2rem, 5.6vw, 5.6vw);
+  color: #333;
+  padding-top: 20px;
+  margin-top: 100px;
+  margin-left: 8.5cap;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  justify-content: center;
+  align-items: center;
 }
