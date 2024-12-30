@@ -360,7 +360,7 @@ h4 {
   color: #333;
   padding-top: 20px;
   margin-top: 100px;
-  margin-left: 9.5cap;
+  margin-left: 9cap;
   margin-bottom: 0px;
   padding-bottom: 0px;
   font-family: "Inter", serif;
@@ -497,7 +497,7 @@ h4 {
   color: #333;
   padding-top: 20px;
   margin-top: 100px;
-  margin-left: 8.5cap;
+  margin-left: 8cap;
   margin-bottom: 0px;
   padding-bottom: 0px;
   font-family: "Inter", serif;
@@ -506,4 +506,95 @@ h4 {
   font-style: normal;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 1100px) and (min-width: 1000px) {
+  .products-h1 {
+    font-size: 5.6vw;
+  }
+}
+@media (max-width: 1000px) and (min-width: 900px) {
+  .products-h1 {
+    font-size: 5.6vw;
+  }
+}
+@media (max-width: 900px) and (min-width: 800px) {
+  .products-h1 {
+    font-size: 6.5vw;
+    margin-left: 330px;
+  }
+}
+@media (max-width: 800px) and (min-width: 700px) {
+  .products-h1 {
+    font-size: 6.8vw;
+    margin-left: 290px;
+  }
+}
+@media (max-width: 700px) and (min-width: 600px) {
+  .products-h1 {
+    font-size: 8.8vw;
+    margin-left: 230px;
+  }
+}
+@media (max-width: 600px) and (min-width: 500px) {
+  .products-h1 {
+    font-size: 9.8vw;
+    margin-left: 180px;
+  }
+}
+@media (max-width: 500px) and (min-width: 400px) {
+  .products-h1 {
+    font-size: 12.8vw;
+    margin-left: 120px;
+  }
+}
+@media (max-width: 400px) and (min-width: 300px) {
+  .products-h1 {
+    font-size: 12.8vw;
+    margin-left: 95px;
+  }
+}
+
+@media (max-width: 300px) {
+  .products-h1 {
+    font-size: 12.8vw;
+    margin-left: 75px;
+  }
+}
+
+.products-container {
+  display: flex;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    300px
+  ); /* Example: creates three columns of equal width */
+  grid-gap: 20px; /* Specifies the gap between rows and columns */
+  justify-content: center; /* Centers the grid horizontally */
+  align-items: center; /* Centers the grid vertically */
+  height: 900px;
+}
+
+.product-card {
+  border: 1px solid black; /* 1px is the width, solid is the style, and black is the color */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  height: auto;
+  border-radius: 15px;
+  opacity: 0; /* Start elements as invisible */
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+@keyframes fadeInOnScroll {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

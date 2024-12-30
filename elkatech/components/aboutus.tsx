@@ -10,48 +10,54 @@ import { TbWorldDollar } from "react-icons/tb";
 import { GrDocumentVerified } from "react-icons/gr";
 
 function AboutUs() {
-  useSlowScroll();
   
   useEffect(() => {
-    // Define a function to start the animation for all children
-    const animateElements = (container: HTMLElement) => {
-      const elements = container.querySelectorAll('.about-us-h1, .about-us-p, .logo-div');
-      elements.forEach((element) => {
-        const htmlElement = element as HTMLElement;
-        htmlElement.style.animation = 'none'; // Reset animation
+    const animateElement = (htmlElement: HTMLElement) => {
+      return new Promise(resolve => {
+        htmlElement.style.animation = 'none';
         setTimeout(() => {
           htmlElement.style.visibility = 'visible';
           htmlElement.style.animation = 'fadeInOnScroll 1s forwards ease-out';
-        }, 5); // Timeout to reapply the animation
+          htmlElement.classList.add('animated');
+          resolve(true); // Resolve when the animation is set
+        }, 5);
       });
     };
 
-    // Setup observer with the animation logic for the container
+    const animateElements = async (container: HTMLElement) => {
+      const elements = container.querySelectorAll('.about-us-h1, .about-us-p, .logo-div');
+      const promises = Array.from(elements).map(element => animateElement(element as HTMLElement));
+      await Promise.all(promises); // Wait for all animations to complete
+      return Array.from(elements).every(el => el.classList.contains('animated')); // Check if all are animated
+    };
+
     const setupObserver = () => {
       const container = document.querySelector('.about-us-background') as HTMLElement | null;
       if (!container) return null;
 
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+      const observer = new IntersectionObserver(async (entries) => {
+        for (let entry of entries) {
           if (entry.isIntersecting) {
-            animateElements(entry.target as HTMLElement);
+            const allAnimated = await animateElements(entry.target as HTMLElement);
+            if (allAnimated) {
+              observer.disconnect(); // Disconnect if all animations are complete
+              break; // Exit loop after disconnection to prevent further checks
+            }
           }
-        });
+        }
       }, { threshold: 0.1 });
 
       observer.observe(container);
-
       return observer;
     };
 
-    // Initialize observer for the container
     const observer = setupObserver();
 
-    // Clean up the observer when the component unmounts
     return () => {
       observer?.disconnect();
     };
   }, []);
+
 
   return (
     <>
@@ -163,7 +169,6 @@ function AboutUs() {
 
     </div>
 
-    {/* Second Logo Div */}
 
    
   </div>

@@ -1,0 +1,71 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #333;
+  color: #fff;
+  position: fixed; /* Set navbar to be fixed */
+  top: 0; /* Align it to the top */
+  left: 0;
+  right: 0; /* Stretch navbar across the full width of the viewport */
+  z-index: 1000; /* Make sure the navbar stays on top of other content */
+}
+
+body {
+  padding-top: 40px;
+}
+
+.logo {
+  margin-right: auto;
+}
+.logo a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.logo img {
+  width: 40px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.navLinks {
+  display: flex;
+  gap: 20px;
+}
+
+.navLinks a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .navLinks {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 1rem;
+  }
+
+  .navLinks.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
