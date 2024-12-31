@@ -25,6 +25,7 @@ body {
 }
 
 .logo img {
+  filter: invert(4000%) brightness(200%) contrast(1000%);
   width: 40px;
   height: auto;
   margin-bottom: 10px;

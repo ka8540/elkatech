@@ -70,7 +70,7 @@ const ProductsContainer: React.FC = () => {
             <p>High precision vinyl cutting machines</p>
         </div>
         <div className='product-card'>
-            <img src="https://5.imimg.com/data5/AE/PI/MY-44078721/vje-inkjet-rotary-engraver-250x250.jpg" alt="TIEM" />
+            <img src="https://5.imimg.com/data5/AE/PI/MY-44078721/vje-inkjet-rotary-engraver-250x250.jpg" alt="TIEM" style={{width:'97%'}}/>
             <h2>Textile Inkjet Engraver Machine</h2>
             <p>High precision textile inkjet engraver machines</p>
         </div>

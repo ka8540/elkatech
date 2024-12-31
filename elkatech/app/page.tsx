@@ -5,7 +5,7 @@ import React, { useEffect } from 'react';
 import AboutUs from '../components/aboutus';
 import Products from '@/components/products';
 import Navbar from '@/components/navbar';
-
+import Footer from '@/components/footer';
 export default function Home() {
   const [showNavbar, setShowNavbar] = React.useState(false);
   const scrollToAboutUs = () => {
@@ -57,11 +57,11 @@ export default function Home() {
         <button className="get-started-button" onClick={scrollToAboutUs}>Get Started</button>
       </div>
       {showNavbar && <Navbar />}
-      <div id="about-us-section">
-      
+      <div id="about-us-section" style={{marginBottom:'100px'}}>
         <AboutUs /> 
       </div>
       <Products/>
+      <Footer />
     </>
   );
 }

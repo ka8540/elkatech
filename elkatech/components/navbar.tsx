@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import styles from './Navbar.module.css';
+import { RxHamburgerMenu } from "react-icons/rx";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +14,7 @@ const Navbar = () => {
                 </Link>
             </div>
             <button className={styles.hamburger} onClick={() => setIsOpen(!isOpen)}>
-                <span>=</span>
+            <RxHamburgerMenu />
             </button>
             <div className={`${styles.navLinks} ${isOpen ? styles.show : ''}`}>
                 <Link href="/" onClick={() => setIsOpen(false)}>

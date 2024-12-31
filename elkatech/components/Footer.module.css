@@ -1,0 +1,67 @@
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 50px; /* Increased padding for better spacing */
+  margin-top: 100px;
+  width: 100%;
+  box-sizing: border-box; /* Ensures padding doesn't affect the width */
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between; /* Ensures even spacing */
+  flex-wrap: wrap;
+  max-width: 1200px; /* Limits the maximum width for better alignment */
+  margin: 0 auto; /* Centers the content */
+}
+
+.footerSection {
+  margin: 10px;
+  flex: 1 1 200px; /* Gives a minimum width to prevent collapsing */
+  display: flex;
+  flex-direction: column; /* Aligns items vertically */
+  align-items: center; /* Centers items for smaller screens */
+}
+
+.footerSection h4 {
+  margin-bottom: 15px;
+}
+
+.footerSection ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footerSection ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footerSection ul li a:hover {
+  color: #ff4500; /* Provides a hover effect */
+}
+
+.footerSection a {
+  margin-bottom: 10px; /* Adds space between links */
+}
+
+.footerBottom {
+  margin-top: 20px;
+  border-top: 1px solid #777;
+  padding-top: 10px;
+  text-align: center; /* Ensures text is centered */
+}
+
+@media (max-width: 768px) {
+  .footerContent {
+    flex-direction: column;
+    align-items: center; /* Centers the sections vertically */
+  }
+
+  .footerSection {
+    margin-bottom: 20px;
+    align-items: center; /* Ensures that text and links are centered */
+  }
+}
